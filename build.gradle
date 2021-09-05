@@ -1,0 +1,39 @@
+apply plugin: 'org.springframework.boot'
+buildscript {
+    repositories {
+        mavenLocal()
+        maven {
+            url = uri('http://maven.aliyun.com/nexus/content/groups/public')
+        }
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+allprojects{
+    group = 'com.laoxin'
+    version APP_VERSION
+
+    apply plugin: 'java'
+    apply plugin: 'org.springframework.boot'
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+    tasks.withType(JavaCompile) {
+        options.encoding = "UTF-8"
+    }
+    repositories {
+        mavenLocal()
+        maven {
+            url = uri('http://maven.aliyun.com/nexus/content/groups/public')
+        }
+        mavenCentral()
+        // Use the plugin portal to apply community plugins in convention plugins.
+        gradlePluginPortal()
+    }
+    dependencies{
+        compileOnly 'io.springfox:springfox-boot-starter:3.0.0'
+        compileOnly 'org.projectlombok:lombok:1.18.12'
+        annotationProcessor 'org.projectlombok:lombok:1.18.12'
+    }
+}

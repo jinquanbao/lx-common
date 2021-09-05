@@ -1,0 +1,18 @@
+description = 'lx-common-core'
+dependencies {
+
+    compileOnly 'org.springframework.boot:spring-boot-starter:2.3.12.RELEASE'
+    compileOnly 'org.springframework.boot:spring-boot-starter-aop:2.3.12.RELEASE'
+    compileOnly 'org.springframework.boot:spring-boot-starter-web:2.3.12.RELEASE'
+    compileOnly 'javax.validation:validation-api:2.0.1.Final'
+    compileOnly 'org.redisson:redisson:3.14.0'
+    compileOnly 'org.springframework.boot:spring-boot-starter-data-redis:2.3.12.RELEASE'
+}
+
+bootJar {
+    enabled = false
+}
+
+jar {
+    enabled = true
+}

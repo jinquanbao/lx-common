@@ -1,0 +1,12 @@
+description = 'lx-common-starter'
+dependencies {
+    compile project(':lx-common-dao')
+}
+
+bootJar {
+    enabled = false
+}
+
+jar {
+    enabled = true
+}

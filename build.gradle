@@ -12,7 +12,7 @@ buildscript {
     }
 }
 allprojects{
-    group = 'com.laoxin'
+    group = 'com.github.jinquanbao'
     version APP_VERSION
 
     apply plugin: 'java'

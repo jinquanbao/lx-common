@@ -9,10 +9,3 @@ dependencies {
     compileOnly 'com.baomidou:mybatis-plus:3.4.1'
 }
 
-bootJar {
-    enabled = false
-}
-
-jar {
-    enabled = true
-}

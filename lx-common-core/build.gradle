@@ -9,10 +9,3 @@ dependencies {
     compileOnly 'org.springframework.boot:spring-boot-starter-data-redis:2.3.12.RELEASE'
 }
 
-bootJar {
-    enabled = false
-}
-
-jar {
-    enabled = true
-}

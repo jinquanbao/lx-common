@@ -1,26 +1,16 @@
-apply plugin: 'org.springframework.boot'
-buildscript {
-    repositories {
-        mavenLocal()
-        maven {
-            url = uri('http://maven.aliyun.com/nexus/content/groups/public')
-        }
-        mavenCentral()
-    }
-    dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-    }
-}
 allprojects{
     group = 'com.github.jinquanbao'
     version APP_VERSION
 
     apply plugin: 'java'
-    apply plugin: 'org.springframework.boot'
     sourceCompatibility = JavaVersion.VERSION_1_8
     targetCompatibility = JavaVersion.VERSION_1_8
     tasks.withType(JavaCompile) {
         options.encoding = "UTF-8"
+    }
+    task sourcesJar(type: Jar) {
+        archiveClassifier = 'sources'
+        from sourceSets.main.allSource
     }
     repositories {
         mavenLocal()

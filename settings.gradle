@@ -1,6 +1,5 @@
 include(':lx-common-core')
 include(':lx-common-dao')
 include(':lx-common-starter')
-include(':lx-common-starter-test')
 
 rootProject.name = 'lx-common'
